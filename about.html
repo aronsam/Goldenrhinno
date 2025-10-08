@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Goldenrhinno Refrigeration & Airconditioning System Trading</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: white;
+      background: url('img/img1.png') no-repeat center center fixed;
+      background-size: cover;
+      line-height: 1.6;
+    }
+
+    header {
+      background: rgba(0, 0, 50, 0.7);
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      text-align: center;
+    }
+
+    .header-content img {
+      height: 60px;
+      width: auto;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .header-content img:hover {
+      transform: scale(1.05);
+    }
+
+    header h1 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ffffff;
+      max-width: 600px;
+    }
+
+    nav {
+      background: rgba(0, 0, 80, 0.85);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      font-weight: 500;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background: #ffffff;
+      color: #003399;
+      border-radius: 4px;
+    }
+
+    .quote-btn {
+      background-color: #007bff;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      padding: 10px 20px;
+      margin-left: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .quote-btn:hover {
+      background-color: #0056b3;
+      color: #fff;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      z-index: 10;
+    }
+
+    .menu-toggle div {
+      width: 26px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    /* About Section */
+    .about {
+      padding: 60px 20px;
+      background: rgba(0, 0, 0, 0.6);
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 34px;
+      margin-bottom: 30px;
+      color: #00bfff;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .about-content {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      text-align: left;
+    }
+
+    .about-content p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .mission-vision {
+      margin-top: 40px;
+    }
+
+    .mission-vision h3 {
+      color: #00ffff;
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+
+    .mission-vision p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background: rgba(0, 0, 50, 0.8);
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .header-content {
+        flex-direction: column;
+      }
+
+      .header-content img {
+        height: 50px;
+      }
+
+      header h1 {
+        font-size: 20px;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        text-align: center;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      nav a {
+        display: block;
+        width: 100%;
+        padding: 12px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .quote-btn {
+        width: 80%;
+        margin: 10px auto;
+      }
+
+      .about {
+        padding: 40px 15px;
+      }
+
+      .about h2 {
+        font-size: 26px;
+      }
+
+      .about-content {
+        padding: 20px;
+      }
+
+      .mission-vision h3 {
+        font-size: 20px;
+      }
+
+      .mission-vision p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <a href="index.html">
+        <img src="img/logo.jpg" alt="Goldenrhinno Logo" />
+      </a>
+      <h1>Goldenrhinno Refrigeration & Airconditioning System Trading</h1>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <nav id="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="product.html">Product</a>
+    <a href="services.html">Service</a>
+    <a href="#">Blog</a>
+    <a href="#">Team</a>
+    <a href="about.html" class="active">About Us</a>
+    <a href="ContactUs.html">Contact Us</a>
+    <a href="#">FB Account</a>
+    <a href="#" class="quote-btn">Get A Quote</a>
+  </nav>
+
+  <section class="about">
+    <h2>🏢 About Us</h2>
+    <div class="about-content">
+      <p>
+        <strong>Goldenrhinno Refrigeration & Airconditioning System Trading</strong> is a trusted service provider specializing in the design, installation, maintenance, and repair of both residential and commercial cooling systems. With years of technical expertise and hands-on experience, our team ensures top-quality workmanship and reliable service for every client.
+      </p>
+      <p>
+        We take pride in delivering efficient and sustainable solutions that meet the cooling needs of households, businesses, and industries. Our goal is to keep your systems running at peak performance — ensuring comfort, energy efficiency, and long-term savings.
+      </p>
+
+      <div class="mission-vision">
+        <h3>🎯 Our Mission</h3>
+        <p>To provide professional, efficient, and affordable refrigeration and airconditioning services while ensuring customer satisfaction through integrity, reliability, and technical excellence.</p>
+
+        <h3>🌟 Our Vision</h3>
+        <p>To be recognized as one of the leading service providers in the HVAC industry, delivering innovation and comfort with a commitment to quality and environmental responsibility.</p>
+      </div>
+
+      <div class="mission-vision">
+        <h3>💪 Why Choose Us?</h3>
+        <p>✅ Highly skilled and certified technicians<br>
+           ✅ Fast and reliable service response<br>
+           ✅ Competitive and transparent pricing<br>
+           ✅ Quality spare parts and equipment<br>
+           ✅ Commitment to customer satisfaction
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Goldenrhinno Refrigeration & Airconditioning System Trading | All Rights Reserved
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
