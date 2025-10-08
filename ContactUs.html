@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Goldenrhinno Refrigeration & Airconditioning System Trading</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: white;
+      background: url('img/img1.png') no-repeat center center fixed;
+      background-size: cover;
+      line-height: 1.6;
+    }
+
+    header {
+      background: rgba(0, 0, 50, 0.7);
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      text-align: center;
+    }
+
+    .header-content img {
+      height: 60px;
+      width: auto;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .header-content img:hover {
+      transform: scale(1.05);
+    }
+
+    header h1 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ffffff;
+      max-width: 600px;
+    }
+
+    nav {
+      background: rgba(0, 0, 80, 0.85);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      font-weight: 500;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background: #ffffff;
+      color: #003399;
+      border-radius: 4px;
+    }
+
+    .quote-btn {
+      background-color: #007bff;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      padding: 10px 20px;
+      margin-left: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .quote-btn:hover {
+      background-color: #0056b3;
+      color: #fff;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      z-index: 10;
+    }
+
+    .menu-toggle div {
+      width: 26px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 60px 20px;
+      background: rgba(0, 0, 0, 0.6);
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 34px;
+      margin-bottom: 30px;
+      color: #00bfff;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .contact-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .contact-info, .contact-form {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 12px;
+      flex: 1 1 400px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      text-align: left;
+    }
+
+    .contact-info h3, .contact-form h3 {
+      color: #00ffff;
+      margin-bottom: 15px;
+    }
+
+    .contact-info p {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      color: #000;
+    }
+
+    .contact-form button {
+      background-color: #007bff;
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #0056b3;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 12px;
+      margin-top: 30px;
+    }
+
+    footer {
+      background: rgba(0, 0, 50, 0.8);
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .header-content {
+        flex-direction: column;
+      }
+
+      .header-content img {
+        height: 50px;
+      }
+
+      header h1 {
+        font-size: 20px;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        text-align: center;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      nav a {
+        display: block;
+        width: 100%;
+        padding: 12px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .quote-btn {
+        width: 80%;
+        margin: 10px auto;
+      }
+
+      .contact {
+        padding: 40px 15px;
+      }
+
+      .contact h2 {
+        font-size: 26px;
+      }
+
+      .contact-info, .contact-form {
+        padding: 20px;
+      }
+
+      .contact-info p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <a href="index.html">
+        <img src="img/logo.jpg" alt="Goldenrhinno Logo" />
+      </a>
+      <h1>Goldenrhinno Refrigeration & Airconditioning System Trading</h1>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <nav id="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="product.html">Product</a>
+    <a href="services.html">Service</a>
+    <a href="#">Blog</a>
+    <a href="#">Team</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html" class="active">Contact Us</a>
+    <a href="#">FB Account</a>
+    <a href="#" class="quote-btn">Get A Quote</a>
+  </nav>
+
+  <section class="contact">
+    <h2>📞 Contact Us</h2>
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Get In Touch</h3>
+        <p><strong>Address:</strong> 123 Main Street, Quezon City, Philippines</p>
+        <p><strong>Phone:</strong> +63 912 345 6789</p>
+        <p><strong>Email:</strong> goldenrhinno@gmail.com</p>
+        <p><strong>Business Hours:</strong><br>Mon - Sat: 8:00 AM - 6:00 PM</p>
+      </div>
+
+      <div class="contact-form">
+        <h3>Send Us a Message</h3>
+        <form action="#" method="post">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <input type="text" name="subject" placeholder="Subject" required>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Submit Message</button>
+        </form>
+      </div>
+    </div>
+
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3857.009732275631!2d121.0437!3d14.6760!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b7698c7a2f4d%3A0x7f0d3b9c869f1b88!2sQuezon%20City%2C%20Philippines!5e0!3m2!1sen!2sph!4v1677654321098"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+	
+	
+  </section>
+
+  <footer>
+    © 2025 Goldenrhinno Refrigeration & Airconditioning System Trading | All Rights Reserved
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
