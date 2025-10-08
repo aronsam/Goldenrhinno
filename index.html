@@ -14,22 +14,48 @@
     body {
       font-family: Arial, sans-serif;
       color: white;
-  background: url('img/img1.png') no-repeat center center;
-background-size: cover;
+      background: url('img/img1.png') no-repeat center center fixed;
+      background-size: cover;
     }
 
     header {
       background: rgba(0, 0, 50, 0.7);
-      padding: 20px 0;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
       text-align: center;
     }
 
-    header h1 {
-      font-size: 28px;
-      font-weight: bold;
-      color: #ffffff;
+    .header-content img {
+      height: 60px;
+      width: auto;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
     }
 
+    .header-content img:hover {
+      transform: scale(1.05);
+    }
+
+    header h1 {
+      font-size: 26px;
+      font-weight: bold;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    /* Navigation styles */
     nav {
       background: rgba(0, 0, 80, 0.85);
       display: flex;
@@ -37,12 +63,13 @@ background-size: cover;
       align-items: center;
       flex-wrap: wrap;
       padding: 10px 0;
+      position: relative;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      padding: 10px 20px;
+      padding: 10px 15px;
       font-weight: 500;
       transition: background 0.3s ease, color 0.3s ease;
     }
@@ -59,7 +86,7 @@ background-size: cover;
       font-weight: bold;
       border-radius: 5px;
       padding: 10px 20px;
-      margin-left: 15px;
+      margin-left: 10px;
       transition: background-color 0.3s ease;
     }
 
@@ -68,11 +95,33 @@ background-size: cover;
       color: #fff;
     }
 
+    /* Hamburger menu button */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: absolute;
+      right: 20px;
+      top: 10px;
+    }
+
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    /* Content section */
     .content {
       text-align: center;
       padding: 100px 20px;
       background: rgba(0, 0, 0, 0.5);
-      min-height: calc(100vh - 160px);
+      min-height: calc(100vh - 180px);
     }
 
     .content h2 {
@@ -93,15 +142,80 @@ background-size: cover;
       padding: 15px;
       font-size: 14px;
     }
+
+    /* Responsive for mobile */
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+      }
+
+      .header-content img {
+        height: 50px;
+      }
+
+      header h1 {
+        font-size: 22px;
+        text-align: center;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 12px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .quote-btn {
+        margin: 10px 0;
+      }
+
+      .content {
+        padding: 70px 15px;
+      }
+
+      .content h2 {
+        font-size: 26px;
+      }
+
+      .content p {
+        font-size: 16px;
+      }
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Goldenrhinno Refrigeration & Airconditioning System Trading</h1>
+    <div class="header-content">
+      <a href="index.html">
+        <img src="img/logo.jpg" alt="Goldenrhinno Logo">
+      </a>
+      <h1>Goldenrhinno Refrigeration & Airconditioning System Trading</h1>
+    </div>
   </header>
 
-  <nav>
+  <div class="menu-toggle" id="menu-toggle">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <nav id="nav-menu">
     <a href="#">Home</a>
     <a href="product.html">Product</a>
     <a href="#">Service</a>
@@ -124,6 +238,16 @@ background-size: cover;
   <footer>
     © 2025 Goldenrhinno Refrigeration & Airconditioning System Trading | All Rights Reserved
   </footer>
+
+  <script>
+    // Toggle mobile menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>
