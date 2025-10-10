@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Goldenrhinno Refrigeration & Airconditioning System Trading</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Goldenrhinno Refrigeration & Airconditioning System Trading</title>
   <link rel="icon" type="image/png" href="logo.png">
   <style>
     * {
@@ -17,11 +17,12 @@
       color: white;
       background: url('img/img1.png') no-repeat center center fixed;
       background-size: cover;
+      line-height: 1.6;
     }
 
     header {
       background: rgba(0, 0, 50, 0.7);
-      padding: 10px 20px;
+      padding: 15px 20px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -33,8 +34,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 15px;
       flex-wrap: wrap;
+      gap: 15px;
       text-align: center;
     }
 
@@ -50,13 +51,12 @@
     }
 
     header h1 {
-      font-size: 26px;
+      font-size: 24px;
       font-weight: bold;
       color: #ffffff;
-      text-align: center;
+      max-width: 600px;
     }
 
-    /* Navigation styles */
     nav {
       background: rgba(0, 0, 80, 0.85);
       display: flex;
@@ -65,6 +65,7 @@
       flex-wrap: wrap;
       padding: 10px 0;
       position: relative;
+      transition: all 0.3s ease;
     }
 
     nav a {
@@ -96,7 +97,6 @@
       color: #fff;
     }
 
-    /* Hamburger menu button */
     .menu-toggle {
       display: none;
       flex-direction: column;
@@ -105,11 +105,12 @@
       cursor: pointer;
       position: absolute;
       right: 20px;
-      top: 10px;
+      top: 15px;
+      z-index: 10;
     }
 
     .menu-toggle div {
-      width: 25px;
+      width: 26px;
       height: 3px;
       background: white;
       margin: 4px 0;
@@ -117,24 +118,48 @@
       transition: all 0.3s ease;
     }
 
-    /* Content section */
-    .content {
+    /* About Section */
+    .about {
+      padding: 60px 20px;
+      background: rgba(0, 0, 0, 0.6);
       text-align: center;
-      padding: 100px 20px;
-      background: rgba(0, 0, 0, 0.5);
-      min-height: calc(100vh - 180px);
     }
 
-    .content h2 {
-      font-size: 36px;
+    .about h2 {
+      font-size: 34px;
+      margin-bottom: 30px;
+      color: #00bfff;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .about-content {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      text-align: left;
+    }
+
+    .about-content p {
+      font-size: 18px;
       margin-bottom: 20px;
     }
 
-    .content p {
+    .mission-vision {
+      margin-top: 40px;
+    }
+
+    .mission-vision h3 {
+      color: #00ffff;
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+
+    .mission-vision p {
       font-size: 18px;
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 1.6;
+      margin-bottom: 20px;
     }
 
     footer {
@@ -144,8 +169,13 @@
       font-size: 14px;
     }
 
-    /* Responsive for mobile */
+    /* Mobile Responsive */
     @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
       .header-content {
         flex-direction: column;
       }
@@ -155,8 +185,7 @@
       }
 
       header h1 {
-        font-size: 22px;
-        text-align: center;
+        font-size: 20px;
       }
 
       .menu-toggle {
@@ -167,6 +196,7 @@
         flex-direction: column;
         display: none;
         width: 100%;
+        text-align: center;
       }
 
       nav.active {
@@ -176,72 +206,94 @@
       nav a {
         display: block;
         width: 100%;
-        text-align: center;
         padding: 12px 0;
         border-top: 1px solid rgba(255, 255, 255, 0.2);
       }
 
       .quote-btn {
-        margin: 10px 0;
+        width: 80%;
+        margin: 10px auto;
       }
 
-      .content {
-        padding: 70px 15px;
+      .about {
+        padding: 40px 15px;
       }
 
-      .content h2 {
+      .about h2 {
         font-size: 26px;
       }
 
-      .content p {
+      .about-content {
+        padding: 20px;
+      }
+
+      .mission-vision h3 {
+        font-size: 20px;
+      }
+
+      .mission-vision p {
         font-size: 16px;
       }
     }
   </style>
 </head>
 <body>
-
   <header>
     <div class="header-content">
       <a href="index.html">
-        <img src="img/logo.jpg" alt="Goldenrhinno Logo">
+        <img src="img/logo.jpg" alt="Goldenrhinno Logo" />
       </a>
       <h1>Goldenrhinno Refrigeration & Airconditioning System Trading</h1>
     </div>
+    <div class="menu-toggle" id="menu-toggle">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   </header>
 
-  <div class="menu-toggle" id="menu-toggle">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-
   <nav id="nav-menu">
-    <a href="#">Home</a>
+    <a href="index.html">Home</a>
     <a href="product.html">Product</a>
     <a href="service.html">Service</a>
     <a href="#">Blog</a>
     <a href="#">Team</a>
-    <a href="about.html">About Us</a>
+    <a href="#" class="active">About Us</a>
     <a href="ContactUs.html">Contact Us</a>
     <a href="#">FB Account</a>
     <a href="#" class="quote-btn">Get A Quote</a>
   </nav>
 
-  <div class="content">
+  <section class="about">
+    <h2>🏢 About Us</h2>
+    <div class="about-content">
+      <p>
+        <strong>Goldenrhinno Refrigeration & Airconditioning System Trading</strong> is a trusted service provider specializing in the design, installation, maintenance, and repair of both residential and commercial cooling systems. With years of technical expertise and hands-on experience, our team ensures top-quality workmanship and reliable service for every client.
+      </p>
+      <p>
+        We take pride in delivering efficient and sustainable solutions that meet the cooling needs of households, businesses, and industries. Our goal is to keep your systems running at peak performance — ensuring comfort, energy efficiency, and long-term savings.
+      </p>
+
+      <div class="mission-vision">
+        <h3>🎯 Our Mission</h3>
+        <p>To provide professional, efficient, and affordable refrigeration and airconditioning services while ensuring customer satisfaction through integrity, reliability, and technical excellence.</p>
+
+        <h3>🌟 Our Vision</h3>
+        <p>To be recognized as one of the leading service providers in the HVAC industry, delivering innovation and comfort with a commitment to quality and environmental responsibility.</p>
+      </div>
+
+       <div class="content">
     <h2>Welcome to Goldenrhinno</h2>
     <p>
       We provide top-quality refrigeration and airconditioning systems for commercial, industrial, and residential applications. 
       Our team specializes in installation, repair, and maintenance of split-type, centralized, and walk-in freezer systems.
     </p>
   </div>
-
-  <footer>
+<footer>
     © 2025 Goldenrhinno Refrigeration & Airconditioning System Trading | All Rights Reserved
   </footer>
 
   <script>
-    // Toggle mobile menu
     const menuToggle = document.getElementById('menu-toggle');
     const navMenu = document.getElementById('nav-menu');
 
@@ -249,10 +301,5 @@
       navMenu.classList.toggle('active');
     });
   </script>
-
 </body>
 </html>
-
-
-
-
