@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Goldenrhinno Refrigeration & Airconditioning System Trading</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: white;
+      background: url('img/img1.png') no-repeat center center fixed;
+      background-size: cover;
+      line-height: 1.6;
+    }
+
+    header {
+      background: rgba(0, 0, 50, 0.7);
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      text-align: center;
+    }
+
+    .header-content img {
+      height: 60px;
+      width: auto;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .header-content img:hover {
+      transform: scale(1.05);
+    }
+
+    header h1 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ffffff;
+      max-width: 600px;
+    }
+
+    nav {
+      background: rgba(0, 0, 80, 0.85);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      font-weight: 500;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background: #ffffff;
+      color: #003399;
+      border-radius: 4px;
+    }
+
+    .quote-btn {
+      background-color: #007bff;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      padding: 10px 20px;
+      margin-left: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .quote-btn:hover {
+      background-color: #0056b3;
+      color: #fff;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      z-index: 10;
+    }
+
+    .menu-toggle div {
+      width: 26px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    /* About Section */
+    .about {
+      padding: 60px 20px;
+      background: rgba(0, 0, 0, 0.6);
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 34px;
+      margin-bottom: 30px;
+      color: #00bfff;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .about-content {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      text-align: left;
+    }
+
+    .about-content p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .mission-vision {
+      margin-top: 40px;
+    }
+
+    .mission-vision h3 {
+      color: #00ffff;
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+
+    .mission-vision p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    /* Welcome Section */
+    .welcome-section {
+      background: rgba(0, 30, 60, 0.7);
+      padding: 60px 20px;
+      margin-top: 40px;
+      text-align: center;
+      border-top: 2px solid #00bfff;
+      border-bottom: 2px solid #00bfff;
+    }
+
+    .welcome-section h2 {
+      font-size: 32px;
+      color: #00ffff;
+      margin-bottom: 25px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .welcome-text {
+      max-width: 950px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 35px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      text-align: left;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .welcome-text strong {
+      color: #00bfff;
+    }
+
+    .welcome-text ul {
+      margin: 15px 0 20px 25px;
+      list-style-type: "ðŸ’  ";
+    }
+
+    footer {
+      background: rgba(0, 0, 50, 0.8);
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .header-content {
+        flex-direction: column;
+      }
+
+      .header-content img {
+        height: 50px;
+      }
+
+      header h1 {
+        font-size: 20px;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        text-align: center;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      nav a {
+        display: block;
+        width: 100%;
+        padding: 12px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .quote-btn {
+        width: 80%;
+        margin: 10px auto;
+      }
+
+      .about {
+        padding: 40px 15px;
+      }
+
+      .about h2 {
+        font-size: 26px;
+      }
+
+      .about-content,
+      .welcome-text {
+        padding: 20px;
+      }
+
+      .welcome-section h2 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <a href="index.html">
+        <img src="img/logo.jpg" alt="Goldenrhinno Logo" />
+      </a>
+      <h1>Goldenrhinno Refrigeration & Airconditioning System Trading</h1>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <nav id="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="product.html">Product</a>
+    <a href="service.html">Service</a>
+    <a href="#">Blog</a>
+    <a href="#" class="active">About Us</a>
+    <a href="ContactUs.html">Contact Us</a>
+    <a href="https://www.facebook.com/goldenrhinocoldstorage" target="_blank">FB Account</a>
+    <a href="#">Request a Home Service</a>
+	<a href="#" class="quote-btn">Get A Quote</a>
+  </nav>
+
+ 
+ 
+    <!-- Report Aircon Problem Section -->
+   <!-- Report Aircon Problem Section -->
+  <section id="aircon-problem" style="background: rgba(0, 0, 30, 0.8); padding: 60px 20px; text-align: center; color: white;">
+    <h2 style="font-size: 30px; color: #00ffff; margin-bottom: 25px;">?? Report Your Aircon Problem</h2>
+    <p style="max-width: 800px; margin: 0 auto 30px; font-size: 18px;">
+      Please fill out the form below so our technicians can assist you.  
+      Select your aircon brand, model, and type — then describe the problem or check from the list below.
+    </p>
+
+    <form action="#" method="post" style="max-width: 850px; margin: 0 auto; background: rgba(255,255,255,0.1); padding: 30px; border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.4); text-align: left;">
+      
+      <!-- Full Name -->
+      <label style="font-weight:bold;">Full Name:</label><br>
+      <input type="text" name="name" placeholder="Enter your full name" required
+        style="width:100%; padding:10px; margin:8px 0 15px; border:none; border-radius:5px;"><br>
+
+      <!-- Contact Info -->
+      <label style="font-weight:bold;">Contact Number / Email:</label><br>
+      <input type="text" name="contact" placeholder="Enter your contact info" required
+        style="width:100%; padding:10px; margin:8px 0 15px; border:none; border-radius:5px;"><br>
+
+      <!-- Address -->
+      <label style="font-weight:bold;">Complete Address:</label><br>
+      <input type="text" name="address" placeholder="Enter your home or business address" required
+        style="width:100%; padding:10px; margin:8px 0 20px; border:none; border-radius:5px;"><br>
+
+      <!-- Aircon Brand and Model -->
+      <label style="font-weight:bold;">Aircon Brand and Model:</label><br>
+      <input type="text" name="brand-model" placeholder="e.g., Panasonic CS-XPU9WKQ, LG Dual Inverter, Samsung AR9500" required
+        style="width:100%; padding:10px; margin:8px 0 20px; border:none; border-radius:5px;"><br>
+
+      <!-- Aircon Type -->
+      <label style="font-weight:bold;">Aircon Model / Type:</label><br>
+      <select name="aircon-type" required
+        style="width:100%; padding:10px; margin:8px 0 20px; border:none; border-radius:5px;">
+        <option value="">-- Select Aircon Type --</option>
+        <option>Split Type</option>
+        <option>Window Type</option>
+        <option>Floor Mounted</option>
+        <option>Cassette-Type</option>
+        <option>Ducted / Centralized</option>
+        <option>VRF / VRV System (Variable Refrigerant Flow / Volume)</option>
+        <option>Portable Air Conditioner</option>
+      </select>
+
+      <!-- Problem Checklist -->
+      <label style="font-weight:bold;">Select the problems you’re experiencing:</label>
+      <div style="margin:10px 0 20px; line-height:1.8;">
+        <label><input type="checkbox" name="problem" value="Not cooling properly"> Aircon not cooling properly</label><br>
+        <label><input type="checkbox" name="problem" value="No power"> No power / Aircon won’t turn on</label><br>
+        <label><input type="checkbox" name="problem" value="Water leaking"> Water leaking from indoor unit</label><br>
+        <label><input type="checkbox" name="problem" value="Weak airflow"> Weak or no airflow</label><br>
+        <label><input type="checkbox" name="problem" value="Unusual noise"> Unusual noise or vibration</label><br>
+        <label><input type="checkbox" name="problem" value="Bad odor"> Bad odor from the aircon</label><br>
+        <label><input type="checkbox" name="problem" value="Remote not working"> Remote control not working</label><br>
+        <label><input type="checkbox" name="problem" value="Ice forming"> Ice or frost forming on coils</label><br>
+        <label><input type="checkbox" name="problem" value="Auto on-off"> Aircon automatically turning on and off</label><br>
+        <label><input type="checkbox" name="problem" value="Compressor not running"> Compressor not running</label><br>
+        <label><input type="checkbox" name="problem" value="High power"> High power consumption</label><br>
+        <label><input type="checkbox" name="problem" value="Outdoor unit not working"> Outdoor unit not working</label><br>
+        <label><input type="checkbox" name="problem" value="Foul smell"> Foul smell or burning odor</label><br>
+        <label><input type="checkbox" name="problem" value="Refrigerant leak"> Refrigerant leak</label><br>
+        <label><input type="checkbox" name="problem" value="Error code"> Error code displayed on panel</label>
+      </div>
+
+      <!-- Detailed Description -->
+      <label style="font-weight:bold;">Describe your aircon problem in detail:</label><br>
+      <textarea name="description" rows="5" placeholder="Please describe when the problem occurs, how often, or any other observations..."
+        style="width:100%; padding:10px; margin:10px 0 20px; border:none; border-radius:5px;"></textarea>
+
+      <!-- Submit Button -->
+      <div style="text-align:center;">
+        <button type="submit" 
+          style="background-color:#007bff; color:white; padding:12px 25px; border:none; border-radius:6px; font-size:16px; cursor:pointer;">
+          Submit Problem Report
+        </button>
+      </div>
+    </form>
+	
+	
+	
+	<script>
+  document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    // Get form values
+    const name = document.querySelector("[name='name']").value;
+    const contact = document.querySelector("[name='contact']").value;
+    const address = document.querySelector("[name='address']").value;
+    const brandModel = document.querySelector("[name='brand-model']").value;
+    const airconType = document.querySelector("[name='aircon-type']").value;
+    const description = document.querySelector("[name='description']").value;
+
+    // Collect all checked problems
+    const problems = Array.from(document.querySelectorAll("input[name='problem']:checked"))
+      .map(cb => cb.value)
+      .join(", ") || "No problems checked";
+
+    // Build message
+    const message = `Aircon Problem Report:
+?? Name: ${name}
+?? Contact: ${contact}
+?? Address: ${address}
+?? Aircon: ${brandModel} (${airconType})
+?? Problems: ${problems}
+?? Description: ${description}`;
+
+    // Encode message and open Messenger link
+    const messengerLink = `https://m.me/VinCageMislag?text=${encodeURIComponent(message)}`;
+    window.open(messengerLink, "_blank");
+  });
+</script>
+
+	
+	
+	
+  </section>
+
+  
+  
+  <footer>
+    Â© 2025 Goldenrhinno Refrigeration & Airconditioning System Trading | All Rights Reserved
+  </footer>
+  
+   
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
