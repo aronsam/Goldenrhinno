@@ -283,12 +283,12 @@ Subject: ${subject}
 Message: ${messageText}`;
 
     // Send to Messenger
-    //const messengerLink = `https://m.me/VinCageMislag?text=${encodeURIComponent(message)}`;
-    //window.open(messengerLink, "_blank");
+    const messengerLink = `https://m.me/VinCageMislag?text=${encodeURIComponent(message)}`;
+    window.open(messengerLink, "_blank");
 
     // Send via Email (opens user's default mail app)
-    const emailLink = `mailto:alvin.galsim@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
-    window.location.href = emailLink;
+    //const emailLink = `mailto:alvin.galsim@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+    //window.location.href = emailLink;
   });
 </script>
 
@@ -392,6 +392,7 @@ Message: ${messageText}`;
 </body>
 
 </html>
+
 
 
 
