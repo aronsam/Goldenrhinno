@@ -197,7 +197,7 @@
 
     .welcome-text ul {
       margin: 15px 0 20px 25px;
-      list-style-type: "💠 ";
+      list-style-type: "ðŸ’  ";
     }
 
     footer {
@@ -307,7 +307,7 @@
     <h2 style="font-size: 30px; color: #00ffff; margin-bottom: 25px;">?? Report Your Aircon Problem</h2>
     <p style="max-width: 800px; margin: 0 auto 30px; font-size: 18px;">
       Please fill out the form below so our technicians can assist you.  
-      Select your aircon brand, model, and type � then describe the problem or check from the list below.
+      Select your aircon brand, model, and type — then describe the problem or check from the list below.
     </p>
 
     <form action="#" method="post" style="max-width: 850px; margin: 0 auto; background: rgba(255,255,255,0.1); padding: 30px; border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.4); text-align: left;">
@@ -347,10 +347,10 @@
       </select>
 
       <!-- Problem Checklist -->
-      <label style="font-weight:bold;">Select the problems you�re experiencing:</label>
+      <label style="font-weight:bold;">Select the problems you’re experiencing:</label>
       <div style="margin:10px 0 20px; line-height:1.8;">
         <label><input type="checkbox" name="problem" value="Not cooling properly"> Aircon not cooling properly</label><br>
-        <label><input type="checkbox" name="problem" value="No power"> No power / Aircon won�t turn on</label><br>
+        <label><input type="checkbox" name="problem" value="No power"> No power / Aircon won’t turn on</label><br>
         <label><input type="checkbox" name="problem" value="Water leaking"> Water leaking from indoor unit</label><br>
         <label><input type="checkbox" name="problem" value="Weak airflow"> Weak or no airflow</label><br>
         <label><input type="checkbox" name="problem" value="Unusual noise"> Unusual noise or vibration</label><br>
@@ -381,8 +381,7 @@
     </form>
 	
 	
-	
-	<script>
+<script>
   document.querySelector("form").addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -399,20 +398,21 @@
       .map(cb => cb.value)
       .join(", ") || "No problems checked";
 
-    // Build message
+    // Build message (removed ??)
     const message = `Aircon Problem Report:
-?? Name: ${name}
-?? Contact: ${contact}
-?? Address: ${address}
-?? Aircon: ${brandModel} (${airconType})
-?? Problems: ${problems}
-?? Description: ${description}`;
+Name: ${name}
+Contact: ${contact}
+Address: ${address}
+Aircon: ${brandModel} (${airconType})
+Problems: ${problems}
+Description: ${description}`;
 
     // Encode message and open Messenger link
     const messengerLink = `https://m.me/VinCageMislag?text=${encodeURIComponent(message)}`;
     window.open(messengerLink, "_blank");
   });
 </script>
+
 
 	
 	
@@ -422,7 +422,7 @@
   
   
   <footer>
-    © 2025 Goldenrhinno Refrigeration & Airconditioning System Trading | All Rights Reserved
+    Â© 2025 Goldenrhinno Refrigeration & Airconditioning System Trading | All Rights Reserved
   </footer>
   
    
@@ -436,4 +436,5 @@
     });
   </script>
 </body>
+
 </html>
