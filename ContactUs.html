@@ -265,32 +265,33 @@
 </head>
 
 
-  <script>
-  document.querySelector(".contact-form form").addEventListener("submit", function(e) {
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.querySelector(".contact-form form");
+
+  form.addEventListener("submit", function(e) {
     e.preventDefault();
 
-    // Get form data
-    const name = document.querySelector("[name='name']").value;
-    const email = document.querySelector("[name='email']").value;
-    const subject = document.querySelector("[name='subject']").value;
-    const messageText = document.querySelector("[name='message']").value;
+    // Get input values
+    const name = document.querySelector("[name='name']").value.trim();
+    const email = document.querySelector("[name='email']").value.trim();
+    const subject = document.querySelector("[name='subject']").value.trim();
+    const messageText = document.querySelector("[name='message']").value.trim();
 
-    // Build message text
-    const message = `New Inquiry Message:
-Name: ${name}
-Email: ${email}
-Subject: ${subject}
-Message: ${messageText}`;
+    // Build formatted message
+    const message = `📩 New Message from Website:
+👤 Name: ${name}
+📧 Email: ${email}
+📝 Subject: ${subject}
+💬 Message: ${messageText}`;
 
-    // Send to Messenger
+    // Redirect to Facebook Messenger with text
     const messengerLink = `https://m.me/VinCageMislag?text=${encodeURIComponent(message)}`;
     window.open(messengerLink, "_blank");
-
-    // Send via Email (opens user's default mail app)
-    //const emailLink = `mailto:alvin.galsim@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
-    //window.location.href = emailLink;
   });
+});
 </script>
+
 
   
 <body>
@@ -392,6 +393,7 @@ Message: ${messageText}`;
 </body>
 
 </html>
+
 
 
 
