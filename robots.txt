@@ -1,6 +1,9 @@
+
 # Allow all search engines
 User-agent: *
-Disallow:
+Allow: /
+
 
 # Sitemap location
 Sitemap: https://goldenrhinno.netlify.app/sitemap.xml
+
